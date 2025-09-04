@@ -9,7 +9,6 @@ RUN apk add --no-cache \
     file \
     gettext \
     git \
-    supervisor \
     make
 
 RUN set -eux; \
@@ -19,7 +18,6 @@ RUN set -eux; \
     intl \
     opcache \
     zip \
-    pdo_pgsql \
     pcntl \
     ;
 

@@ -11,11 +11,6 @@ services:
       #  from the bind-mount for better performance by enabling the next line:
       #- /app/vendor
     environment:
-      MAIL_MAILER: smtp 
-      MAIL_HOST: mailer 
-      MAIL_PORT: 1025
-      MAIL_USERNAME: null
-      MAIL_PASSWORD: null
       NODE_ENV: ${NODE_ENV:-development}
       FRANKENPHP_WORKER_CONFIG: watch
       # See https://xdebug.org/docs/all_settings#mode
@@ -28,31 +23,6 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - 5173:5173
-  
-  database:
-    ports:
-      - "5432"
-  
-  mailer:
-    image: axllent/mailpit
-    ports:
-      - "1025"
-      - "8025"
-    environment:
-      MP_SMTP_AUTH_ACCEPT_ANY: 1
-      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+      - "5173:5173"
 
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-      PGADMIN_CONFIG_SERVER_MODE: "False"
-    volumes:
-      - pgadmin_data:/var/lib/pgadmin
-
-volumes:
-  pgadmin_data:
-    
 

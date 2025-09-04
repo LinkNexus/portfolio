@@ -8,7 +8,3 @@ services:
       NODE_ENV: production
       APP_ENV: production
       APP_DEBUG: false
-  
-  database:
-    volumes:
-      - ./docker/db/data:/var/lib/postgresql/data:rw
