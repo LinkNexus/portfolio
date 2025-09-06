@@ -16,7 +16,7 @@
     >
       <div class="text-center md:text-left">
         <h1 class="text-4xl font-bold mb-2" data-animate>
-          {{ $personalData['name'] }}
+          {{ $personalData['name'] }} {{ " " }}
           <span class="inline-block animate-pulse">✨</span>
         </h1>
 
@@ -31,6 +31,7 @@
             @mouseenter="animate($el, { scale: 1.05, color: '#4b5563' }, { duration: 0.2 })"
             @mouseleave="animate($el, { scale: 1, color: '#6b7280' }, { duration: 0.2 })"
           >
+            <x-lucide-map-pin class="h-4 w-4 mr-2"/>
             📍 {{ $personalData['location'] }}
           </div>
 
@@ -41,6 +42,7 @@
             @mouseenter="animate($el, { scale: 1.05, color: '#4b5563' }, { duration: 0.2 })"
             @mouseleave="animate($el, { scale: 1, color: '#6b7280' }, { duration: 0.2 })"
           >
+            <x-lucide-mail class="h-4 w-4 mr-2"/>
             ✉️ {{ $personalData['email'] }}
           </a>
 
@@ -53,6 +55,7 @@
             @mouseenter="animate($el, { scale: 1.05, color: '#4b5563' }, { duration: 0.2 })"
             @mouseleave="animate($el, { scale: 1, color: '#6b7280' }, { duration: 0.2 })"
           >
+            <x-lucide-github class="h-4 w-4 mr-2"/>
             🌟 GitHub
           </a>
 
@@ -65,6 +68,7 @@
             @mouseenter="animate($el, { scale: 1.05, color: '#4b5563' }, { duration: 0.2 })"
             @mouseleave="animate($el, { scale: 1, color: '#6b7280' }, { duration: 0.2 })"
           >
+            <x-lucide-linkedin class="h-4 w-4 mr-2"/>
             🔗 LinkedIn
           </a>
         </div>

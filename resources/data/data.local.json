@@ -4,7 +4,7 @@
   "email": "contact@levynkeneng.dev",
   "github": "https://github.com/LinkNexus",
   "linkedin": "https://www.linkedin.com/in/levy-nkeneng-2b977a304",
-  "speech": "Passionate software engineer with a versatile skill set spanning multiple domains. I thrive on solving complex challenges across different platforms and environments, adapting quickly to new technologies and methodologies. My holistic approach combines technical expertise with creative problem-solving, allowing me to develop solutions that are both innovative and practical. I'm driven by continuous learning and a commitment to excellence, whether working independently or collaborating with diverse teams to create impactful, scalable solutions.",
+  "speech": "🚀 Passionate software engineer with a versatile skill set spanning multiple domains. I thrive on solving complex challenges across different platforms and environments, adapting quickly to new technologies and methodologies. My holistic approach combines technical expertise with creative problem-solving, allowing me to develop solutions that are both innovative and practical. I'm driven by continuous learning and a commitment to excellence, whether working independently or collaborating with diverse teams to create impactful, scalable solutions.",
   "layout": {
     "title": "Levy Nkeneng's Portfolio",
     "description": "Explore the professional portfolio of Levy Nkeneng, a skilled web developer and software engineer specializing in modern frontend and backend technologies. Discover projects, skills, and experience in JavaScript, TypeScript, Astro, React, and more."
@@ -24,50 +24,68 @@
     }
   ],
   "skills": {
-    "programmingLanguages": [
-      "TypeScript",
-      "C# and .NET",
-      "PHP"
-    ],
-    "frontendDevelopment": [
-      "ViteJs",
-      "Nextjs",
-      "Reactjs",
-      "AlpineJs",
-      "Shadcn UI",
-      "Tailwind CSS",
-      "Wouter"
-    ],
-    "backendDevelopment": [
-      "Nodejs",
-      "Fastify",
-      "PHP",
-      "Symfony",
-      "Shopware 6",
-      "Laravel"
-    ],
-    "databaseAndStorage": [
-      "PostgreSQL",
-      "Doctrine (ORM)",
-      "Eloquent ORM",
-      "MySQL",
-      "SQLite"
-    ],
-    "devOps": [
-      "Docker",
-      "Docker Compose",
-      "CI/CD",
-      "Dokploy",
-      "Traefik",
-      "Cloudflare",
-      "Ansible"
-    ],
-    "toolsAndServices": [
-      "Git",
-      "IDEs (VSCode, PHPStorm...)",
-      "Fish Terminal",
-      "Warp Terminal"
-    ]
+    "Programming Languages": {
+      "emoji": "💻",
+      "list": [
+        "TypeScript",
+        "C# and .NET",
+        "PHP"
+      ]
+    },
+    "Frontend Development": {
+      "emoji": "🎨",
+      "list": [
+        "ViteJs",
+        "Nextjs",
+        "Reactjs",
+        "AlpineJs",
+        "Shadcn UI",
+        "Tailwind CSS",
+        "Wouter"
+      ]
+    },
+    "Backend Development": {
+      "emoji": "⚙️",
+      "list": [
+        "Nodejs",
+        "Fastify",
+        "PHP",
+        "Symfony",
+        "Shopware 6",
+        "Laravel"
+      ]
+    },
+    "Database & Storage": {
+      "emoji": "🗄️",
+      "list": [
+        "PostgreSQL",
+        "Doctrine (ORM)",
+        "Eloquent ORM",
+        "MySQL",
+        "SQLite"
+      ]
+    },
+    "DevOps": {
+      "emoji": "☁️",
+      "list": [
+        "Docker",
+        "Docker Compose",
+        "CI/CD",
+        "Dokploy",
+        "Traefik",
+        "Cloudflare",
+        "Ansible"
+      ]
+    },
+    "Tools & Services": {
+      "emoji": "🧰",
+      "list": [
+        "Git",
+        "IDEs (VSCode, PHPStorm...)",
+        "Fish Terminal",
+        "Warp Terminal"
+      ]
+    }
   },
   "projects": [
     {

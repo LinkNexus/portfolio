@@ -120,8 +120,35 @@
     * {
         @apply border-border outline-ring/50;
     }
+
     body {
         @apply bg-background text-foreground;
     }
 }
 
+/* Custom light effects */
+@layer utilities {
+    .light-glow {
+        background: radial-gradient(ellipse 100% 40% at 50% 0%, rgba(120, 119, 198, 0.4), transparent 70%);
+    }
+
+    .light-beam {
+        background: linear-gradient(180deg,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(120, 119, 198, 0.3) 20%,
+                rgba(120, 119, 198, 0.1) 40%,
+                transparent 70%);
+    }
+
+    .dark .light-glow {
+        background: radial-gradient(ellipse 100% 40% at 50% 0%, rgba(120, 119, 198, 0.25), transparent 70%);
+    }
+
+    .dark .light-beam {
+        background: linear-gradient(180deg,
+                rgba(255, 255, 255, 0.15) 0%,
+                rgba(120, 119, 198, 0.2) 20%,
+                rgba(120, 119, 198, 0.08) 40%,
+                transparent 70%);
+    }
+}

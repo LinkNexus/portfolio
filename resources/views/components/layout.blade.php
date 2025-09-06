@@ -2,15 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 @php
-  $file = "data." . app()->environment() . ".json";
-  $data = file_get_contents(resource_path("data/$file"));
-
   ["title" => $title, "description" => $description] = $personalData["layout"];
 @endphp
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <meta name="description"
         content="{{ $description }}"/>
@@ -48,7 +46,14 @@
   @endif
 
 </head>
-<body>
+<body
+  class="min-h-screen bg-background font-sans antialiased selection:bg-purple-500/20 selection:text-purple-500"
+>
+
+<div
+  class="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+>
+</div>
 
 {{ $slot }}
 

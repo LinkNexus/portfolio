@@ -3,7 +3,7 @@
 @endphp
 
 <header
-  class="sticky z-50 w-full backdrop-blur-md backdrop-filter bg-background/70 dark:bg-background/40 border-b border-border/40 supports-[backdrop-filter]:bg-background/60"
+  class="sticky z-50 w-full backdrop-blur-xl backdrop-filter bg-background/70 dark:bg-background/40 border-b border-border/40 supports-[backdrop-filter]:bg-background/60"
   x-data="{ isMenuOpen: false }">
 
   <div class="container max-w-4xl mx-auto p-4 flex justify-between items-center">

@@ -4,8 +4,10 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
+    environment:
+      DASHBOARD_PASSWORD: ${DASHBOARD_PASSWORD:-admin123}
     volumes:
-      - caddy_data:/data 
+      - caddy_data:/data
       - caddy_config:/config
 
 volumes:

@@ -1,4 +1,4 @@
-<x-button
+<x-ui.button
   variant="ghost"
   x-data="{ theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light' }"
   @click="
@@ -18,4 +18,4 @@
   </template>
 
   <span class="sr-only">Toggle theme</span>
-</x-button>
+</x-ui.button>
