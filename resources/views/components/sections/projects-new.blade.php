@@ -70,13 +70,21 @@
                       >
                         <x-lucide-code class="h-5 w-5" />
                       </div>
-                      <h3
-                        class="text-xl font-bold leading-tight text-gray-900 transition-colors duration-300 group-hover:text-purple-600 dark:text-white dark:group-hover:text-purple-400"
+
+                      <!-- Project Status -->
+                      <span
+                        class="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-300"
                       >
-                        {{ $project['name'] ?? 'Untitled Project' }}
-                      </h3>
+                        <span class="mr-1 h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                        Active
+                      </span>
                     </div>
 
+                    <h3
+                      class="text-xl font-bold leading-tight text-gray-900 transition-colors duration-300 group-hover:text-purple-600 dark:text-white dark:group-hover:text-purple-400"
+                    >
+                      {{ $project['name'] ?? 'Untitled Project' }}
+                    </h3>
                   </div>
                 </div>
 
@@ -181,9 +189,42 @@
                       <x-lucide-external-link
                         class="h-3 w-3 opacity-80 transition-opacity group-hover/btn:opacity-100" />
                     </a>
+                  @else
+                    <!-- Coming Soon Button -->
+                    <div
+                      class="flex flex-1 items-center justify-center space-x-2 rounded-xl bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-3 text-sm font-semibold text-gray-500 dark:from-gray-800 dark:to-gray-700 dark:text-gray-400"
+                    >
+                      <x-lucide-clock class="h-4 w-4" />
+                      <span>Demo Soon</span>
+                    </div>
                   @endif
                 </div>
+
+                <!-- Enhanced Project Metadata -->
+                <div class="mt-6 flex items-center justify-between rounded-lg bg-gray-50 px-4 py-3 dark:bg-gray-800/50">
+                  <div class="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center space-x-1">
+                      <x-lucide-code class="h-3 w-3" />
+                      <span class="font-medium">{{ count($project['languages'] ?? []) }} techs</span>
+                    </div>
+
+                    <div class="flex items-center space-x-1">
+                      <x-lucide-calendar class="h-3 w-3" />
+                      <span class="font-medium">2024</span>
+                    </div>
+                  </div>
+
+                  <!-- Project Type Badge -->
+                  <div class="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1">
+                    <span class="text-xs font-bold text-white">Featured</span>
+                  </div>
+                </div>
               </div>
+
+              <!-- Hover Glow Effect -->
+              <div
+                class="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 opacity-0 blur transition-opacity duration-500 group-hover:opacity-20"
+              ></div>
             </div>
           </div>
         </article>

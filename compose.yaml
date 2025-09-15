@@ -6,6 +6,8 @@ services:
     restart: unless-stopped
     environment:
       DASHBOARD_PASSWORD: ${DASHBOARD_PASSWORD:-admin123}
+      MAIL_FROM_ADDRESS: ${MAIL_FROM_ADDRESS:-noreply@levynkeneng.dev}
+      APP_NAME: "Levy Nkeneng"
     volumes:
       - caddy_data:/data
       - caddy_config:/config

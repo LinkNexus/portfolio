@@ -7,7 +7,7 @@
       name="title"
       label="Portfolio Title"
       required
-      value="{!! $personalData['layout']['title'] !!}"
+      value="{!! $personalData['title'] !!}"
     />
 
     <x-dashboard.form.field
@@ -15,7 +15,7 @@
       name="description"
       label="Portfolio Description"
       rows="4"
-      value="{!! $personalData['layout']['description'] !!}"
+      value="{!! $personalData['description'] !!}"
     />
   </div>
 </x-dashboard.collapsible-section>

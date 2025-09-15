@@ -25,9 +25,9 @@
       'icon' => "h-9 w-9",
   ];
 
-  $classes = trim($baseClasses . ' ' . ($variants[$variant] ?? $variants['default']) . ' ' . ($sizes[$size] ?? $sizes['default']) . ' ' . ($attributes['class'] ?? ''));
+  $classes = trim($baseClasses . ' ' . ($variants[$variant] ?? $variants['default']) . ' ' . ($sizes[$size] ?? $sizes['default']));
 @endphp
 
-<{{ $as }} {{ $attributes->merge(['class' => $classes]) }}>
+<{{ $as }} {{ $attributes->merge(["class" => $classes]) }}>
 {{ $slot }}
 </{{ $as }}>

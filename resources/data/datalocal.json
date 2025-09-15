@@ -3,7 +3,6 @@
     "email": "contact@levynkeneng.dev",
     "location": "Berlin, Germany",
     "github": "LinkNexus",
-    "linkedin": "https://www.linkedin.com/in/levy-nkeneng-2b977a304",
     "speech": "\ud83d\ude80 Passionate software engineer with a versatile skill set spanning multiple domains. I thrive on solving complex challenges across different platforms and environments, adapting quickly to new technologies and methodologies. My holistic approach combines technical expertise with creative problem-solving, allowing me to develop solutions that are both innovative and practical. I'm driven by continuous learning and a commitment to excellence, whether working independently or collaborating with diverse teams to create impactful, scalable solutions.",
     "title": "Levy Nkeneng's Portfolio",
     "description": "Explore the professional portfolio of Levy Nkeneng, a skilled web developer and software engineer specializing in modern frontend and backend technologies. Discover projects, skills, and experience in JavaScript, TypeScript, Astro, React, and more.",
@@ -97,46 +96,7 @@
                 "Shell"
             ],
             "stars": 0,
-            "liveUrl": ""
-        },
-        {
-            "id": 1029990232,
-            "name": "blitz-task",
-            "description": "A tasks-managment app powered by symfony showcasing features like dragand-drop of tasks, files upload, ai-chat and much more. Still in construction...",
-            "url": "https://github.com/LinkNexus/blitz-task",
-            "languages": [
-                "TypeScript",
-                "PHP",
-                "Twig",
-                "CSS",
-                "Dockerfile",
-                "Makefile",
-                "Shell"
-            ],
-            "stars": 0,
-            "liveUrl": ""
-        },
-        {
-            "id": 1039977849,
-            "name": "team-anaconda",
-            "description": "An Ai-Assistent cross-platform app made with .NET 9 and Maui powered by OpenAI and Ollama server to help by the management of daily tasks.",
-            "url": "https://github.com/LinkNexus/team-anaconda",
-            "languages": [
-                "C#"
-            ],
-            "stars": 0,
-            "liveUrl": ""
-        }
-    ],
-    "education": [
-        {
-            "institution": "HTW Berlin",
-            "degree": "Bachelor",
-            "location": "Berlin, Germany",
-            "period": "April 2024 - Now",
-            "achievements": [
-                "Mastery of C#"
-            ]
+            "preview": ""
         }
     ]
 }
