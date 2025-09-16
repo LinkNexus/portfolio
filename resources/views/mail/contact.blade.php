@@ -1,12 +1,15 @@
 <x-mail::message>
-# Introduction
+  # New Message from Portfolio
 
-The body of your message.
+  ## From: {{ $name }}, {{ $email }}
 
-<x-mail::button :url="''">
-Button Text
-</x-mail::button>
+  Subject: {{ $subjectString }}
 
-Thanks,<br>
-{{ config('app.name') }}
+  Message: {{ $message }}
+
+  Recieved on {{ now() }}
+
+  <x-mail::button url="mailto:{{ $email }}">
+    Contact the person
+  </x-mail::button>
 </x-mail::message>

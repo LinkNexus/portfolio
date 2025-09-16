@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PersonalDataRequest;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
@@ -70,40 +71,10 @@ class DashboardController extends Controller
 
     public function index()
     {
-        if (request()->method() === 'POST') {
-            $validated = request()->validate([
-                'name' => ['required', 'string', 'max:255'],
-                'email' => ['required', 'string', 'email'],
-                'location' => ['nullable', 'string'],
-                'github' => ['required', 'string'],
-                'linkedin' => ['required', 'string'],
-                'speech' => ['required', 'string'],
-                'title' => ['required', 'string'],
-                'description' => ['required', 'string'],
-                'workExperience' => ['json'],
-                'skills' => ['json'],
-                'projects' => ['json'],
-                'education' => ['json'],
-            ]);
-
-            $data = [
-                ...$validated,
-                'workExperience' => json_decode($validated['workExperience'], true),
-                'skills' => json_decode($validated['skills'], true),
-                'projects' => json_decode($validated['projects'], true),
-                'education' => json_decode($validated['education'], true),
-            ];
-
-            $file = resource_path('data/data.' . app()->environment() . '.json');
-            file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-
-            return back()->with('status', 'Profile updated successfully!');
-        }
-
         return view('dashboard.index');
     }
 
-    public function handleSubmit(PersonalDataRequest $request)
+    public function handleSubmit(PersonalDataRequest $request): RedirectResponse
     {
         $validated = $request->validated();
 

@@ -29,6 +29,6 @@ Route::post('/contact', function (ContactRequest $request) {
 Route::controller(DashboardController::class)
     ->group(function () {
         Route::match(['POST', 'GET'], 'login', 'login')->name('login');
-        Route::get('/dashboard', 'index')->name('dashboard')->middleware('dashboard_auth');
-        Route::post('/dashboard', 'handle_submit')->name('handleSubmit')->middleware('dashboard_auth');
+        Route::view('/dashboard', 'dashboard.index')->middleware('dashboard_auth');
+        Route::post('/dashboard', 'handleSubmit')->name('dashboard.handle_submit')->middleware('dashboard_auth');
     });

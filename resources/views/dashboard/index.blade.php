@@ -15,7 +15,7 @@
       <form
         class="space-y-6"
         method="POST"
-        action="{{ route('dashboard') }}"
+        action="{{ route('dashboard.handle_submit') }}"
       >
         @csrf
 

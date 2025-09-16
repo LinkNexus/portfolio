@@ -73,7 +73,7 @@
                 Email Me
               </h4>
               <p class="text-gray-600 dark:text-gray-400">
-                {{ $personalData['email'] ?? 'hello@example.com' }}
+                {{ $personalData['email'] }}
               </p>
             </div>
             <x-lucide-external-link
@@ -83,7 +83,7 @@
 
           <!-- LinkedIn -->
           <a
-            href="https://linkedin.com/in/{{ $personalData['linkedin'] ?? '#' }}"
+            href="{{ $personalData['linkedin'] }}"
             target="_blank"
             class="group flex items-center rounded-2xl border border-white/20 bg-white/80 p-6 shadow-lg backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:border-blue-500/30 hover:shadow-2xl dark:border-gray-800/50 dark:bg-gray-900/80"
           >
@@ -109,7 +109,7 @@
 
           <!-- GitHub -->
           <a
-            href="https://github.com/{{ $personalData['github'] ?? '#' }}"
+            href="https://github.com/{{ $personalData['github'] }}"
             target="_blank"
             class="group flex items-center rounded-2xl border border-white/20 bg-white/80 p-6 shadow-lg backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:border-gray-500/30 hover:shadow-2xl dark:border-gray-800/50 dark:bg-gray-900/80"
           >

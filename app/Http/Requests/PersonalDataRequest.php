@@ -22,16 +22,18 @@ class PersonalDataRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string'],
             'email' => ['required', 'string', 'email'],
-            'loocation' => ['nullable', 'string'],
+            'location' => ['nullable', 'string'],
+            'linkedin' => ['required', 'string'],
             'github' => ['required', 'string'],
-            'speech' => ['required', 'string', 'max:500'],
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', 'max:1000'],
+            'speech' => ['required', 'string'],
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
             'workExperience' => ['json'],
             'skills' => ['json'],
             'projects' => ['json'],
+            'education' => ['json'],
         ];
     }
 }

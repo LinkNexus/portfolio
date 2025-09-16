@@ -2,8 +2,8 @@
     "name": "Levy Nkeneng",
     "email": "contact@levynkeneng.dev",
     "location": "Berlin, Germany",
+    "linkedin": "https://www.linkedin.com/in/levy-nkeneng",
     "github": "LinkNexus",
-    "linkedin": "https://www.linkedin.com/in/levy-nkeneng-2b977a304",
     "speech": "\ud83d\ude80 Passionate software engineer with a versatile skill set spanning multiple domains. I thrive on solving complex challenges across different platforms and environments, adapting quickly to new technologies and methodologies. My holistic approach combines technical expertise with creative problem-solving, allowing me to develop solutions that are both innovative and practical. I'm driven by continuous learning and a commitment to excellence, whether working independently or collaborating with diverse teams to create impactful, scalable solutions.",
     "title": "Levy Nkeneng's Portfolio",
     "description": "Explore the professional portfolio of Levy Nkeneng, a skilled web developer and software engineer specializing in modern frontend and backend technologies. Discover projects, skills, and experience in JavaScript, TypeScript, Astro, React, and more.",
@@ -136,6 +136,15 @@
             "period": "April 2024 - Now",
             "achievements": [
                 "Mastery of C#"
+            ]
+        },
+        {
+            "institution": "hey",
+            "degree": "hey",
+            "location": "hey",
+            "period": "hey",
+            "achievements": [
+                "hey"
             ]
         }
     ]
