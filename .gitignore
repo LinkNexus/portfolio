@@ -24,8 +24,6 @@ Homestead.yaml
 Thumbs.db
 
 **/caddy
-frankenphp
-frankenphp-worker.php
 
 resources/data/data.local.json
 app/Console/Commands/BladeNav.php

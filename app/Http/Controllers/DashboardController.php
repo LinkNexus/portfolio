@@ -23,7 +23,7 @@ class DashboardController extends Controller
 
                 RateLimiter::clear($this->throttleKey(request()));
 
-                return redirect()->route('dashboard');
+                return redirect()->route('dashboard.index');
             }
 
             RateLimiter::hit($this->throttleKey(request()));

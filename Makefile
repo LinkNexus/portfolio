@@ -30,9 +30,6 @@ run-app: ## Run the Docker containers
 up: ## Start the Docker containers in detached mode (no logs)
 	@$(DOCKER_COMP) -f compose.yaml -f compose.override.yaml up --detach
 
-up-prod: ## Start the Docker containers in detached mode for production (no logs)
-	@$(DOCKER_COMP) -f compose.yaml -f compose.prod.yaml up --detach
-
 start: build up ## Build and start the containers
 
 down: ## Stop the Docker containers
