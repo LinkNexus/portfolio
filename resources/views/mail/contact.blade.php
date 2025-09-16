@@ -7,7 +7,7 @@
 
   Message: {{ $message }}
 
-  Recieved on {{ now() }}
+  Received on {{ now() }}
 
   <x-mail::button url="mailto:{{ $email }}">
     Contact the person
