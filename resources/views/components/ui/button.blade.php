@@ -1,13 +1,13 @@
 @props([
     'variant' => 'default',
     'size' => 'default',
-    'as' => 'button', {{-- polymorphic: button | a | div --}}
+    'as' => 'button',
 ])
 
 @php
   $baseClasses = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors
-      focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring
-      disabled:pointer-events-none disabled:opacity-50";
+      focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring cursor-pointer
+      disabled:pointer-events-none disabled:opacity-50 disabled:cursor-normal";
 
   $variants = [
       'default' => "bg-primary text-primary-foreground shadow hover:bg-primary/90",
@@ -25,9 +25,9 @@
       'icon' => "h-9 w-9",
   ];
 
-  $classes = trim($baseClasses . ' ' . ($variants[$variant] ?? $variants['default']) . ' ' . ($sizes[$size] ?? $sizes['default']) . ' ' . ($attributes['class'] ?? ''));
+  $classes = trim($baseClasses . ' ' . ($variants[$variant] ?? $variants['default']) . ' ' . ($sizes[$size] ?? $sizes['default']));
 @endphp
 
-<{{ $as }} {{ $attributes->merge(['class' => $classes]) }}>
+<{{ $as }} {{ $attributes->merge(["class" => $classes]) }}>
 {{ $slot }}
 </{{ $as }}>
