@@ -42,7 +42,6 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ]; then
 
     php artisan optimize
     php artisan preload:stub
-    mv preload.php config
   fi
 
 
