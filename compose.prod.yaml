@@ -6,7 +6,7 @@ services:
       target: frankenphp_prod
     environment:
       NODE_ENV: production
-      APP_ENV: production
+      APP_ENV: ${APP_ENV:-production}
       APP_DEBUG: ${APP_DEBUG:-false}
       MAIL_MAILER: resend
       RESEND_KEY: ${RESEND_KEY}

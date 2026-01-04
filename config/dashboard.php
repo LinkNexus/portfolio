@@ -1,5 +1,5 @@
 <?php
 
 return [
-  "password" => env("DASHBOARD_PASSWORD", "admin123")
+    'password' => env('DASHBOARD_PASSWORD', 'admin123'),
 ];
