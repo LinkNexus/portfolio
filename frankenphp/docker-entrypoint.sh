@@ -33,8 +33,9 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ]; then
 
   if [ ! -f .env ]; then
     cp .env.example .env
-    php artisan key:generate --ansi
   fi
+
+  php artisan key:generate --ansi
 
   if [ "$APP_ENV" = "production" ]; then
     php artisan icons:clear

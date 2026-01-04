@@ -55,8 +55,7 @@ RUN apk add nodejs npm
 
 COPY --link frankenphp/conf.d/20-app.dev.ini $PHP_INI_DIR/app.conf.d/
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
-#CMD ["php", "artisan", "octane:frankenphp", "--watch"]
+CMD ["php", "artisan", "octane:frankenphp", "--watch"]
 
 
 
