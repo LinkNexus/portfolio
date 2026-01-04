@@ -14,7 +14,10 @@ export default defineConfig({
     viteReact()
   ],
   server: {
-    cors: true
+    cors: true,
+    hmr: {
+			host: "127.0.0.1",
+		},
   },
   resolve: {
     alias: {

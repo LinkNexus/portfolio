@@ -33,6 +33,7 @@ COPY --link --chmod=755 frankenphp/docker-entrypoint.sh /usr/local/bin/docker-en
 ENTRYPOINT ["docker-entrypoint"]
 
 HEALTHCHECK --start-period=60s CMD curl -f http://localhost:2019/metrics || exit 1
+
 CMD ["php", "artisan", "octane:frankenphp"]
 
 
@@ -93,6 +94,4 @@ COPY --from=node_build --link /app/public/build /app/public/build
 RUN rm -Rf frankenphp/
 
 RUN set -eux; \
-  composer dump-autoload --classmap-authoritative --no-dev; \
-  [ -f .env ] || cp .env.example .env; \
-  php artisan key:generate --ansi;
+  composer dump-autoload --classmap-authoritative --no-dev;

@@ -31,6 +31,11 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ]; then
   # Or about an error in project initialization
   php artisan
 
+  if [ ! -f .env ]; then
+    cp .env.example .env
+    php artisan key:generate --ansi
+  fi
+
   if [ "$APP_ENV" = "production" ]; then
     php artisan icons:clear
     php artisan icons:cache
@@ -40,8 +45,10 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ]; then
     mv preload.php config
   fi
 
+
   if [ "$(find ./database/migrations -iname '*.php' -print -quit)" ]; then
     if [ "$APP_ENV" != "production" ]; then
+      touch /app/database/database.sqlite
       php artisan migrate:fresh --seed --no-interaction
     else
       php artisan migrate --force --no-interaction

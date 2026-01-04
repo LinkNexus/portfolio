@@ -26,6 +26,7 @@ services:
     tty: true
     stdin_open: true
     ports:
+      - "8100:8000"
       - "5173:5173"
 
   mailer:
